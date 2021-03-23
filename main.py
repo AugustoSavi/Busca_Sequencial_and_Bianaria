@@ -5,10 +5,12 @@ def menu():
     vet=[]
     posicoes=[]
     n=0
+    print('-------------Menu-------------')
     print('informe a opção que deseja:')
     print('1->Busca Sequencial')
     print('2->Busca binaria')
     escolha=int(input('->'))
+    print('--------------------------')
 
     if escolha == 1:
      tam = int(input('informe o tamanho do vetor:'))
@@ -26,15 +28,10 @@ def ordenado (vet, tam, chave, posicoes, n ):
 
     print('-------------Busca sequencial-------------')
 
-    print('-------informe o intervalo------')
-
-    comeco_intervalo=int(input('começa em:'))
-    fim_intervalo=int(input('termina em:'))
-
     inicio = time.time()
 
     for aux in range(tam):
-        vet.append(random.randint(comeco_intervalo, fim_intervalo))
+        vet.append(random.randint(0, 999999999))
 
     #vet.sort()
 
@@ -51,7 +48,8 @@ def ordenado (vet, tam, chave, posicoes, n ):
     fim = time.time()
 
     print('tempo de execução:{}'.format(fim - inicio))
-    print('--------------------------------------')
+
+    menu()
 
 
 def randomico (vet,tam,chave,posicoes,n):
@@ -59,13 +57,8 @@ def randomico (vet,tam,chave,posicoes,n):
     #print(tam)
     inicio=time.time()
 
-    print('-------informe o intervalo------')
-
-    comeco_intervalo=int(input('começa em:'))
-    fim_intervalo=int(input('termina em:'))
-
     for aux in range(tam):
-        vet.append(random.randint(comeco_intervalo,fim_intervalo))
+        vet.append(random.randint(0,999999999))
 
     vet.sort()
 
@@ -98,7 +91,7 @@ def randomico (vet,tam,chave,posicoes,n):
     fim = time.time()
     print('tempo de execução:{}'.format(fim-inicio))
 
-    print('--------------------------------------')
+    menu()
 
 
 if __name__ == menu():
